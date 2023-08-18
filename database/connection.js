@@ -2,6 +2,7 @@ const mongo = require("mongoose")
 const dotenv=require("dotenv")
 dotenv.config();
 conne=process.env.connect
+console.log(conne)
 const conn = mongo.connect(conne,{
     useNewUrlParser:true,
     useUnifiedTopology:true
