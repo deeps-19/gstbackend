@@ -1,9 +1,9 @@
 const mongo = require("mongoose")
 const dotenv=require("dotenv")
 dotenv.config();
-conne=process.env.connect
-console.log(conne)
-const conn = mongo.connect(conne,{
+uri=process.env.connect
+// console.log(conne)
+const conn = mongo.connect(uri,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
