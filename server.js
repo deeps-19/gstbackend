@@ -5,6 +5,7 @@ const userModel = require('./module/customer.js');
 const bodyparser=require('body-parser');
 const dontenv=require('dotenv')
 const app=express();
+const cors = require('cors');
 
 dontenv.config();
 const PORT = process.env.PORT;
@@ -13,6 +14,11 @@ app.listen(PORT,(res,req)=>{
 })
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.json({extended:true}));
+app.use(cors({
+    origin :"*"
+    
+
+}));
 app.post('/api/creater',(req,res)=>{
     
     // if( req.body=={})
